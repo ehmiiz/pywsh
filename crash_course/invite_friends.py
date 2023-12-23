@@ -60,7 +60,7 @@ print("\nBad news. Can only invite two people. You will get a notice if you can 
 
 for member in invite_list:
     uninvited = invite_list.pop()
-    print(f"\tYou are uninvited: {uninvited.title()}. Sorry")
+    print(f"\tYou are uninvited: {uninvited.title()}. Sorry.")
 
 for member in invite_list:
     uninvited = invite_list.pop()
