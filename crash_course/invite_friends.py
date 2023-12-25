@@ -68,3 +68,7 @@ for member in invite_list:
 
 for member in invite_list:
     print(f"\tYou are still welcome: {member.title()}")
+
+amount_of_members = len(invite_list)
+message = f"Thanks, all {amount_of_members} of you for the party."
+print(message)
