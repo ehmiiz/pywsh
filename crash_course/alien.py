@@ -1,12 +1,10 @@
-# alien was just shot down in a game
+# Nested aliens!
 
-alien_color = 'tjoghej'
+alien_0 = {'color': 'green', 'points': 5}
+alien_1 = {'color': 'red', 'points': 10}
+alien_2 = {'color': 'orange', 'points': 15}
 
-if alien_color == 'green':
-    points = 5
-elif alien_color == 'yellow':
-    points = 10
-else:
-    points = 15
+aliens = [alien_0, alien_1, alien_2]
 
-print(f"You just killed a {alien_color} alien, that's {points} points!")
+for alien in aliens:
+    print(alien)
