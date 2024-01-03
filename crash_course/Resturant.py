@@ -5,6 +5,7 @@ class Resturant:
     def __init__(self, resturant_name, cuisine_type):
         self.resturant_name = resturant_name
         self.cuisine_type = cuisine_type
+        self.numbers_served = 0
 
     # A method that describes the resturant
     def describe_resturant(self):
@@ -13,18 +14,25 @@ class Resturant:
     # A method that opens the resturant
     def open_resturant(self):
         print(f'The resturant: "{self.resturant_name}" is now open!')
+    
+    def set_number_served(self, value):
+        self.numbers_served = value
+    
+    def increment_number_served(self, value):
+        self.numbers_served = self.numbers_served + value
 
-# An instance of the resturant class
-resturant_one = Resturant('Palace', 'Pizzeria')
-resturant_two = Resturant('Jureskogs', 'Hamburgare')
-resturant_three = Resturant('ChopChop', 'Thai')
+class IceCreamStand(Resturant):
+    """An attemt to model an Ice Cream Stand type resturant."""
+    def __init__(self, resturant_name, cuisine_type):
+        super().__init__(resturant_name, cuisine_type)
+        self.flavors = ["Chocolate", "Licorice", "Strawberry"]
+    
+    
+    def get_flavors(self):
+        print(self.flavors)
 
-# Calling it's methods
-resturant_one.open_resturant()
-resturant_one.describe_resturant()
+ice_cream_stand = IceCreamStand("Lucas Icecream AB", "Ice Cream")
 
-resturant_two.open_resturant()
-resturant_two.describe_resturant()
+ice_cream_stand.get_flavors()
 
-resturant_three.open_resturant()
-resturant_three.describe_resturant()
+ice_cream_stand.describe_resturant()
