@@ -1,4 +1,7 @@
-# Define the class
+"""
+The resturant module exposes the Resturant class, that creates
+resturant instances.
+"""
 class Resturant:
     """An attempt to model a Resturant."""
     # Sets the standard attributes to it's instances
@@ -30,9 +33,3 @@ class IceCreamStand(Resturant):
     
     def get_flavors(self):
         print(self.flavors)
-
-ice_cream_stand = IceCreamStand("Lucas Icecream AB", "Ice Cream")
-
-ice_cream_stand.get_flavors()
-
-ice_cream_stand.describe_resturant()
